@@ -3,6 +3,7 @@ import background from '../assets/background.svg';
 import headshot from '../assets/headshot.png';
 import Layout from '../layouts/Layout.astro';
 import halftone_star from '../assets/halftone_star.png';
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout>
@@ -10,7 +11,7 @@ import halftone_star from '../assets/halftone_star.png';
 		<img id="background" src={background.src} alt="" fetchpriority="high" />
 		<main>
 		<div>
-			<img src="/halftone_star.png">
+			<img src={`${base}halftone_star.png`} alt="" />
 		</div>
 			<section id="hero">
 				<div class="intro-row">
@@ -19,15 +20,15 @@ import halftone_star from '../assets/halftone_star.png';
 					</div>
 					<div id="resume-block">
 						<h1>Maya Tomarchio</h1>
-						<a href="/resume.pdf" class="button resume-button" target="_blank" rel="noreferrer">Resume</a>
+						<a href={`${base}resume.pdf`} class="button resume-button" target="_blank" rel="noreferrer">Resume</a>
 					</div>
 				</div>
 			</section>
 		</main>
 
 		<aside class="side-nav">
-			<a href="/CG_class">Computer Graphics</a>
-			<a href="/UI_class">User Interface</a>
+			<a href={`${base}CG_class`}>Computer Graphics</a>
+			<a href={`${base}UI_class`}>User Interface</a>
 		</aside>
 	</div>
 </Layout>

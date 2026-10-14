@@ -1,10 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout>
   <main class="project-page">
-    <a class="back-link" href="/CG_class/">Back to Computer Graphics</a>
+    <a class="back-link" href={`${base}CG_class/`}>Back to Computer Graphics</a>
 
     <header class="hero">
       <h1>My Fruit Worth</h1>
@@ -12,7 +13,7 @@ import Layout from '../layouts/Layout.astro';
     </header>
 
     <section class="preview-card">
-      <img src="/myFruitWorth.png" alt="My Fruit Worth project preview" class="project-image" />
+      <img src={`${base}myFruitWorth.png`} alt="My Fruit Worth project preview" class="project-image" />
       <div class="project-info">
         <p>
           A short game prototype where the player collects fruit from the garden while practicing
@@ -22,7 +23,7 @@ import Layout from '../layouts/Layout.astro';
           <a href="https://maya2234.github.io/myFruitWorth/" target="_blank" rel="noreferrer" class="primary-button">
             Play the game
           </a>
-          <a href="/" class="secondary-button">Home</a>
+          <a href={base} class="secondary-button">Home</a>
         </div>
       </div>
     </section>

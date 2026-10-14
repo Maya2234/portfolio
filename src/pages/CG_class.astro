@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout>
@@ -8,11 +9,11 @@ import Layout from '../layouts/Layout.astro';
     <section id="project_1" style="display:flex; flex-direction:column; padding:2rem;">
       <h2>My Fruit Worth</h2>
       <p>Pick all of the fruit growing in your garden</p>
-      <a href="/myFruitWorth" class="project-link">
-        <img src="/myFruitWorth.png" alt="My Fruit Worth project preview" />
+      <a href={`${base}myFruitWorth`} class="project-link">
+        <img src={`${base}myFruitWorth.png`} alt="My Fruit Worth project preview" />
       </a>
     </section>
-    <a id="home" style="position:fixed; bottom:40px; left:10px; font-size:2rem; padding:2 rem" href="/">&lt</a>
+    <a id="home" style="position:fixed; bottom:40px; left:10px; font-size:2rem; padding:2 rem" href={base}>&lt</a>
   </main>
 </Layout>
 
